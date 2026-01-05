@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Lumo's Trello</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">💜</div>
+        <div class="brand-text">
+          <h1>Lumo’s Trello</h1>
+          <p class="sub">Assignments · Labs · Projects · Mods · Unfinished</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="resetBtn" class="btn btn-ghost" type="button">Reset</button>
+        <button id="exportBtn" class="btn btn-ghost" type="button">Export</button>
+
+        <label class="btn btn-ghost file-btn" title="Import board JSON">
+          Import
+          <input id="importInput" type="file" accept="application/json" hidden />
+        </label>
+      </div>
+    </header>
+
+    <main class="app">
+      <section class="board-shell">
+        <div class="board-header">
+          <h2>Your Board</h2>
+
+          <form id="addListForm" class="add-list" autocomplete="off">
+            <input id="listTitleInput" type="text" placeholder="Add a list…" maxlength="40" required />
+            <button class="btn" type="submit">Add</button>
+          </form>
+        </div>
+
+        <div id="board" class="board" aria-label="Lumo's Trello board"></div>
+      </section>
+
+      <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    </main>
+
+    <footer class="footer">
+      <span>Tip: drag cards between lists • double-click a card title to edit</span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

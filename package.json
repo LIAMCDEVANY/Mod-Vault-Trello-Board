@@ -1,0 +1,10 @@
+{
+  "name": "mod-vault",
+  "version": "1.0.0",
+  "description": "Mod-Vault Trello Board",
+  "main": "app.js",
+  "scripts": {
+    "serve": "serve ."
+  },
+  "license": "MIT"
+}
